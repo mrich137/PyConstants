@@ -15,12 +15,11 @@ class CONST_GRP2(ConstBaseClass):
         self.const1 = "g2c1"
         self.const3 = "g2c3"
         
-        
         ''' Uncomment this line to prevent adding more attributes '''
         self._locked = 1
-    
+
 def main():
-    """ main function for module debug """
+    """ Main function for module debug """
     CG2 = CONST_GRP2()
     print CG2.items()
     CG2.printitems()

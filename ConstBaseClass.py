@@ -6,11 +6,11 @@ Created on Jul 1, 2014
 '''
 
 """ DO NOT MODIFY BASE CLASS!!!!! """
-class ConstBaseClass: 
+class ConstBaseClass:
     """
-    forbids to overwrite existing variables 
+    forbids to overwrite existing variables
     forbids to add new values if "_locked" variable exists
-    """ 
+    """
         
     def __setattr__(self,name,value):
         """ Base Class constructor to prevent changing const vals """
@@ -39,3 +39,4 @@ class ConstBaseClass:
     def items(self):
         """ Returns List of (name, value) """
         return self.__dict__.items()
+        
