@@ -20,6 +20,3 @@ CG1.printitems()
 CG2 = CONST_GRP2()
 print CG2.items()
 CG2.printitems()
-
-def Hello():
-    print 'Hello, World!'
