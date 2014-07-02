@@ -17,6 +17,9 @@ $RECYCLE.BIN/
 # Compiled Python Files
 *.pyc
 
+# Sublime-workspace
+*.sublime-workspace
+
 # =========================
 # Operating System Files
 # =========================
