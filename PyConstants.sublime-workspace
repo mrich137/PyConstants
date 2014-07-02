@@ -4,6 +4,26 @@
 		"selected_items":
 		[
 			[
+				"d",
+				"def	Function"
+			],
+			[
+				"def",
+				"defm	defm"
+			],
+			[
+				"de",
+				"defs	Method"
+			],
+			[
+				"f",
+				"function"
+			],
+			[
+				"ma",
+				"main"
+			],
+			[
 				"c",
 				"calendar"
 			],
@@ -39,29 +59,23 @@
 			"file": "CONST_GRP2.py",
 			"settings":
 			{
-				"buffer_size": 640,
+				"buffer_size": 628,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"contents": "'''\nCreated on Jul 1, 2014\n\n@author: mrich\n@module: Constants.ConstBaseClass\n'''\n\n\"\"\" DO NOT MODIFY BASE CLASS!!!!! \"\"\"\nclass ConstBaseClass: \n    \"\"\"\n    forbids to overwrite existing variables \n    forbids to add new values if \"_locked\" variable exists\n    \"\"\" \n        \n    def __setattr__(self,name,value):\n        \"\"\" Base Class constructor to prevent changing const vals \"\"\"\n        if(self.__dict__.has_key(\"_locked\")):    \n            raise NameError(\"Class is locked can not add any attributes (%s)\"%name)\n        if self.__dict__.has_key(name):\n            raise NameError(\"Can't rebind const(%s)\"%name)\n        self.__dict__[name]=value\n        \n    def islocked(self):\n        \"\"\" Returns bool of locked status \"\"\"    \n        if(self.__dict__.has_key(\"_locked\")):\n            return True\n        else:\n            return False    \n        \n    def printitems(self):\n        \"\"\" Prints names & values for class consts (excludes _locked)\"\"\"\n        for i in self.__dict__.items():\n            if i[0] != '_locked':\n                print self.__class__.__name__+ '.'+ i[0], '\\t=\\t', i[1]\n        \n        print \"Locked:\", self.islocked()    \n        print '\\n'\n        \n    def items(self):\n        \"\"\" Returns List of (name, value) \"\"\"\n        return self.__dict__.items()\n        \n",
 			"file": "ConstBaseClass.py",
-			"file_size": 1333,
-			"file_write_time": 130488026198709141,
 			"settings":
 			{
-				"buffer_size": 1293,
+				"buffer_size": 1290,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"contents": "'''\nCreated on Jul 1, 2014\n\n@author: mrich\n@module: test\n@parent: \n\nThis is an example of how the constants are imported\nand accessed in an external file\n'''\n\nfrom CONST_GRP1 import *\nfrom CONST_GRP2 import *\n\nCG1 = CONST_GRP1()\n\nprint CG1.items()\nCG1.printitems()\n\nCG2 = CONST_GRP2()\nprint CG2.items()\nCG2.printitems()\n\n",
 			"file": "test.py",
-			"file_size": 394,
-			"file_write_time": 130488026356289141,
 			"settings":
 			{
-				"buffer_size": 321,
+				"buffer_size": 359,
 				"line_ending": "Windows"
 			}
 		}
@@ -73,15 +87,55 @@
 		"selected_items":
 		[
 			[
-				"",
-				"Bookmarks: Select Next"
-			],
-			[
 				"dis",
 				"Package Control: Disable Package"
 			],
 			[
+				"disable",
+				"SublimeCodeIntel: Disable Plugin"
+			],
+			[
+				"push",
+				"Git: Push"
+			],
+			[
+				"bran",
+				"Legit: Branches"
+			],
+			[
+				"git con",
+				"Git: Open Config File"
+			],
+			[
 				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"log",
+				"Git: Log Current File"
+			],
+			[
+				"git push",
+				"Git: Push"
+			],
+			[
+				"git c",
+				"Git: Commit"
+			],
+			[
+				"git ad",
+				"Git: Add Current File"
+			],
+			[
+				"i",
+				"Package Control: Install Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
 				"Package Control: Install Package"
 			],
 			[
@@ -89,8 +143,16 @@
 				"Package Control: Install Package"
 			],
 			[
-				"insta",
-				"Package Control: Install Package"
+				"lint",
+				"User: Python Flake8 Lint"
+			],
+			[
+				"lin",
+				"User: Python Flake8 Lint"
+			],
+			[
+				"",
+				"Bookmarks: Select Next"
 			],
 			[
 				"tog f",
@@ -141,14 +203,6 @@
 				"Package Control: Install Package"
 			],
 			[
-				"lint",
-				"User: Python Flake8 Lint"
-			],
-			[
-				"ins",
-				"Package Control: Install Package"
-			],
-			[
 				"syn jav",
 				"Set Syntax: Java"
 			],
@@ -177,7 +231,7 @@
 				"Set Syntax: SQL"
 			]
 		],
-		"width": 536.0
+		"width": 400.0
 	},
 	"console":
 	{
@@ -194,6 +248,15 @@
 	},
 	"file_history":
 	[
+		"/C/Users/mrich/Programming Projects/PyConstants/.gitattributes",
+		"/C/Users/mrich/Programming Projects/PyConstants/.gitignore",
+		"/C/Users/mrich/Programming Projects/PyConstants/.git/config",
+		"/C/Users/mrich/AppData/Roaming/Sublime Text 2/Packages/Git/Git.sublime-settings",
+		"/C/Users/mrich/AppData/Roaming/Sublime Text 2/Packages/SublimeGit/SublimeGit.sublime-settings",
+		"/C/Users/mrich/AppData/Roaming/Sublime Text 2/Packages/Python/if.sublime-snippet",
+		"/C/Users/mrich/AppData/Roaming/Sublime Text 2/Packages/User/Python/defm.sublime-snippet",
+		"/C/Users/mrich/Programming Projects/PyConstants/PyConstants.sublime-project",
+		"/C/Users/mrich/Programming Projects/PyConstants/PyConstants.sublime-workspace",
 		"/C/Users/mrich/AppData/Roaming/Sublime Text 2/Packages/User/sublime_jedi.sublime-settings",
 		"/C/Users/mrich/AppData/Roaming/Sublime Text 2/Packages/Jedi - Python autocompletion/sublime_jedi.sublime-settings",
 		"/C/Users/mrich/Desktop/ST2 Shortcuts.json",
@@ -238,6 +301,7 @@
 	"groups":
 	[
 		{
+			"selected": 3,
 			"sheets":
 			[
 				{
@@ -273,25 +337,129 @@
 					"file": "CONST_GRP2.py",
 					"settings":
 					{
-						"buffer_size": 640,
+						"buffer_size": 628,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								628,
+								628
 							]
 						],
 						"settings":
 						{
+							"codeintel": true,
+							"codeintel_config":
+							{
+								"JavaScript":
+								{
+									"codeintel_max_recursive_dir_depth": 2.0,
+									"codeintel_scan_files_in_project": false,
+									"javascriptExtraPaths":
+									[
+									]
+								},
+								"PHP":
+								{
+									"codeintel_max_recursive_dir_depth": 5.0,
+									"codeintel_scan_files_in_project": false,
+									"phpExtraPaths":
+									[
+									]
+								},
+								"Python":
+								{
+									"env":
+									{
+									}
+								}
+							},
+							"codeintel_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_live": true,
+							"codeintel_live_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_max_recursive_dir_depth": 10.0,
+							"codeintel_scan_exclude_dir":
+							{
+								"JavaScript":
+								[
+									"/build/",
+									"/min/"
+								]
+							},
+							"codeintel_scan_files_in_project": true,
+							"codeintel_selected_catalogs":
+							[
+								"PyWin32",
+								"jQuery",
+								"Rails"
+							],
+							"codeintel_snippets": true,
+							"codeintel_syntax_map":
+							{
+								"Python Django": "Python"
+							},
+							"codeintel_tooltips": "popup",
+							"sublime_auto_complete": true,
 							"syntax": "Packages/Python/Python.tmLanguage",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 54.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -301,15 +469,15 @@
 					"file": "ConstBaseClass.py",
 					"settings":
 					{
-						"buffer_size": 1293,
+						"buffer_size": 1290,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1293,
-								1293
+								1289,
+								1289
 							]
 						],
 						"settings":
@@ -433,20 +601,20 @@
 					"file": "test.py",
 					"settings":
 					{
-						"buffer_size": 321,
+						"buffer_size": 359,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								321,
-								321
+								359,
+								359
 							]
 						],
 						"settings":
 						{
-							"codeintel": true,
+							"codeintel": false,
 							"codeintel_config":
 							{
 								"JavaScript":
@@ -596,6 +764,14 @@
 	{
 		"height": 174.0
 	},
+	"output.git":
+	{
+		"height": 118.0
+	},
+	"output.git-push":
+	{
+		"height": 118.0
+	},
 	"replace":
 	{
 		"height": 0.0
@@ -621,6 +797,6 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 150.0,
+	"side_bar_width": 220.0,
 	"status_bar_visible": true
 }
